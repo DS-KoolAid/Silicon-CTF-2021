@@ -1,0 +1,5 @@
+services:
+        web_empire_circuit:
+                build: . 
+                ports:
+                        - "8080:80"
