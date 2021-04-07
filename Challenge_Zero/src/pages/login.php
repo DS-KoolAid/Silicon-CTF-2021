@@ -73,17 +73,72 @@ Licence URI: https://www.os-templates.com/template-terms
     <article>
       <!-- <p>Mauris placerat sem hendrerit</p> -->
       <h3 class="heading">Empire Employee Portal</h3>
-      <form action="login.php" method="POST">
-        <div class="container">
-          <input type="text" placeholder="Enter Username" name="uname" required>
+      <?php
+      if ($_SERVER['REQUEST_METHOD']=='POST'){
+          $name = $_POST["uname"];
+          $secret = $_POST["psw"];
+
+          if (isset($name) && $name !== "" && isset($secret) && $secret !== "") {
+              if ($name === "tc_174812" and $secret === "3f3f85v3da") {
+                  echo <<< HERE
+                  <h6>flag{B0rN_70_8E_R3b3ls}</h6>
+                  HERE;
+              }
+              else {
+                echo <<< HERE
+                <h6>Incorrect UserName Password combo</h6>
+                <form action="login.php" method="POST">
+                  <div class="container">
+                    <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
+                
+                    <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+                
+          
+                  </div>
+                  <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
+                </form>
+                <!-- <p>Empire Employee Portal</p> -->
+                HERE;
+              }
+          }
+          else {
+              echo <<< HERE
+              <h6>Incorrect UserName Password combo</h6>
+              <form action="login.php" method="POST">
+                <div class="container">
+                  <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
+              
+                  <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+              
+         
+                </div>
+                <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
+              </form>
+              <!-- <p>Empire Employee Portal</p> -->
+              HERE;
+
+          }
+
+      }
+    
+      elseif ($_SERVER['REQUEST_METHOD']==="GET"){
+        echo <<< HERE
+        <form action="login.php" method="POST">
+          <div class="container">
+            <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
+        
+            <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+        
+   
+          </div>
+          <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
+        </form>
+        <!-- <p>Empire Employee Portal</p> -->
+        HERE;
+
+    }
+    ?>
       
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
- 
-        </div>
-      </form>
-      <!-- <p>Empire Employee Portal</p> -->
-      <footer><a class="btn" href="#">Login <i class="fas fa-angle-right"></i></a></footer>
     </article>
     <!-- ################################################################################################ -->
   </div>
