@@ -2,7 +2,7 @@ version: '3'
 services:
     mysql-sr:
         build: ./mysql
-        container_name: mysql-server
+        container_name: mysql-server_web500
         command: --default-authentication-plugin=mysql_native_password --sql_mode=""
         restart: always
         environment:
@@ -12,6 +12,8 @@ services:
             - backend
     web-server:
         build: ./src
+        volumes:
+            - ./src/src:/var/www/html
         ports:
             - "8234:80"
         depends_on:

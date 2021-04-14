@@ -30,9 +30,25 @@ function retreive_user_hash($uname){
     $res = $statement->get_result();
     check_errors($res);
     $pw_hash = $res->fetch_assoc();
+    // echo $pw_hash['pw_hash'];
     $statement->close();
-    return $pw_hash;
+    return $pw_hash['pw_hash'];
 
+}
+
+function get_otp_date($uname){
+  global $db;
+    $statement = $db->prepare(
+      "SELECT otp_date FROM login_table WHERE name = ?"
+    );
+    check_errors($statement);
+    $statement->bind_param("s", $uname);
+    check_errors($statement->execute());
+    $res = $statement->get_result();
+    check_errors($res);
+    $ts = $res->fetch_assoc();
+    $statement->close();
+    return $ts['otp_date'];
 }
 
 function load_flag(){
@@ -47,5 +63,5 @@ function load_flag(){
     check_errors($res);
     $flag = $res->fetch_assoc();
     $statement->close();
-    return $flag;
+    return $flag['flag'];
 }

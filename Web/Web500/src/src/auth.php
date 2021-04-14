@@ -4,7 +4,7 @@ require_once("db.php");
 
 function check_login($uname, $psw){
 
-    $comp1=substr(hash("sha256",$psw),0,8);
+    $comp1=hash("md5",$psw);
     $comp2=retreive_hash($uname);
     if ($comp1 == $comp2){
         return true;
@@ -15,8 +15,19 @@ function check_login($uname, $psw){
 
 }
 
+ function check_one_time_login($uname,$otp,$gen_date){
+     $otp_gen_date = get_otp_date($uname);
+     $code = substr(hash("md5",$uname . retreive_hash($uname) . $gen_date),0,10);
+    if ($code == $otp){
+        return true;
+    }
+    else{
+        return false;
+    }
+ }
+
 function retreive_hash($uname){
-    $ps_hash=substr(retreive_user_hash($uname),0,8);
+    $pw_hash=retreive_user_hash($uname);
     return $pw_hash;
 }
 
