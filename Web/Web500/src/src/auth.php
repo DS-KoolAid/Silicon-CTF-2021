@@ -15,9 +15,12 @@ function check_login($uname, $psw){
 
 }
 
- function check_one_time_login($uname,$otp,$gen_date){
-     $otp_gen_date = get_otp_date($uname);
-     $code = substr(hash("md5",$uname . retreive_hash($uname) . $gen_date),0,10);
+ function check_one_time_login($uname,$otp,$id, $e){
+     if (!check_email($e)){
+         return false;
+     }
+     $code = substr(hash("md5",$id . retreive_hash($uname) . get_otp_date($uname) . $e),0,10);
+     echo $code; 
     if ($code == $otp){
         return true;
     }
@@ -34,4 +37,13 @@ function retreive_hash($uname){
 function set_password($uname,$psw){
     $psw_hash=hash("sha256",$psw);
     set_password($uname,$psw_hash);
+}
+
+function check_email($e){
+    if (!filter_var($e, FILTER_VALIDATE_EMAIL)) {
+        return false; 
+      }
+      else{
+          return true;
+      }
 }
