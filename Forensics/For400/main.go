@@ -62,9 +62,9 @@ func main() {
 
     
 	
-	flag := "flag{sampleflaghere}"
+	flag := "silicon{SometimesStringsIsBetterthanIDA}"
 
-	filename := "test.txt"
+	filename := "sparrow.sh"
 
     if (Exists(filename)){
 		fmt.Println(flag)
