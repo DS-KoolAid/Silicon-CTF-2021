@@ -6,7 +6,7 @@
 
     <article>
 
-      <h3 class="heading">Death Star Login</h3>
+      <h3 class="heading">Sith Login</h3>
       <?php
       require_once("auth.php");
       require_once("messages.php");

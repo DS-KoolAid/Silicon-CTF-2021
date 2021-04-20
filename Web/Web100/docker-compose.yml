@@ -1,0 +1,8 @@
+version: '3'
+services:
+    web-server_console_tie_fighter:
+        build: ./src
+        volumes:
+            - ./src/src:/var/www/html
+        ports:
+            - "8235:80"
