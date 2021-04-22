@@ -6,7 +6,7 @@ function form_message($failure){
 
         $html_form = <<<'EOT'
         
-                  <form action="login.php" method="POST">
+                  <form action="index.php" method="POST">
                     <div class="container">
                       <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
                   

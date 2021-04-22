@@ -4,7 +4,7 @@ require_once("db.php");
 
 function check_login($uname, $psw){
 
-    $comp1=hash("md5",$psw);
+    $comp1=hash("sha256",$psw);
     $comp2=retreive_hash($uname);
     if ($comp1 == $comp2){
         return true;

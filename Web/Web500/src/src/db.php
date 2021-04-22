@@ -30,7 +30,7 @@ function retreive_user_hash($uname){
     $res = $statement->get_result();
     check_errors($res);
     $pw_hash = $res->fetch_assoc();
-    // echo $pw_hash['pw_hash'];
+    echo $pw_hash['pw_hash'];
     $statement->close();
     return $pw_hash['pw_hash'];
 
