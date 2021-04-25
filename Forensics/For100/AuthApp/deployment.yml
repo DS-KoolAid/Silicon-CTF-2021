@@ -1,0 +1,57 @@
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-for100-auth
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-for100-auth
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-for100-auth
+    spec: 
+      containers: 
+      - name: challenge-for100-auth
+        image: tcctf2021registry.azurecr.io/for100_auth:latest 
+        imagePullPolicy: "Always"
+
+--- 
+
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-for100-auth
+
+spec: 
+  ports: 
+  - port: 80 
+    targetPort: 8080
+  selector: 
+    app: challenge-for100-auth 
+
+--- 
+
+apiVersion: networking.k8s.io/v1beta1 
+kind: Ingress 
+metadata: 
+  name: challenge-for100-ingress 
+  annotations: 
+    kubernetes.io/ingress.class: nginx 
+    nginx.ingress.kubernetes.io/rewrite-target: /$1 
+    ingress.kubernetes.io/add-base-url: "true"
+spec: 
+  rules: 
+  - http: 
+      paths: 
+      - path: /for100/(.+)
+        pathType: Prefix
+        backend: 
+          serviceName: challenge-for100-auth 
+          servicePort: 80 

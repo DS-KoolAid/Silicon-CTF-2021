@@ -24,4 +24,4 @@ def products():
 @app.route('/secret')
 @basic_auth.required
 def sercret():
-    return "here is my secret"
+    return "silicon{Base64I$n73ncrypti0n}"
