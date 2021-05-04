@@ -21,7 +21,7 @@ def manage_c2_traffic():
         else:
             return "who tf are you"
     else:
-        return "you gave me nothing"
+        return "nothing to see here"
     
     
 

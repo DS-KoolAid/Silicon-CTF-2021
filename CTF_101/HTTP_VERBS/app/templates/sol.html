@@ -10,10 +10,10 @@ Licence URI: https://www.os-templates.com/template-terms
 <html lang="en">
 
 <head>
-<title>Empire Employee Portal</title>
+<title>Secret Death Star Weapon Server</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="static/layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 <!-- ################################################################################################ -->
@@ -23,7 +23,7 @@ Licence URI: https://www.os-templates.com/template-terms
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="one_quarter first">
-      <h1><a href="../index.html"><span>G</span>alactic<span>E</span>mpire</h1>
+      <h1><a href="index.html"><span>G</span>alactic<span>E</span>mpire</h1>
     </div>
     <div class="three_quarter">
       <ul class="nospace clear">
@@ -49,14 +49,8 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <nav id="mainav">
       <ul class="clear">
-        <li class="active"><a href="../index.html">Home</a></li>
-        <li><a class="drop" href="#">Pages</a>
-          <ul>
-            <li><a href="login.php">Login</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
 
-          </ul>
-        </li>
 
     </nav>
     <!-- ################################################################################################ -->
@@ -67,92 +61,30 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('../images/empire_flag.png'); background-position: center;">
+<div class="wrapper bgded overlay" style="background-image:url('static/images/dstar.png'); background-position: center fixed;">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
-      <!-- <p>Mauris placerat sem hendrerit</p> -->
-      <h3 class="heading">Empire Employee Portal</h3>
-      <?php
-      if ($_SERVER['REQUEST_METHOD']=='POST'){
-          $name = $_POST["uname"];
-          $secret = $_POST["psw"];
-
-          if (isset($name) && $name !== "" && isset($secret) && $secret !== "") {
-              if ($name === "tc_174812" and $secret === "3f3f85v3da") {
-                  echo <<< HERE
-                  <h6>flag{B0rN_70_8E_R3b3ls}</h6>
-                  HERE;
-              }
-              else {
-                echo <<< HERE
-                <h6>Incorrect UserName EmployeeID combo</h6>
-                <form action="login.php" method="POST">
-                  <div class="container">
-                    <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
-                
-                    <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
-                
-          
-                  </div>
-                  <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
-                </form>
-                <!-- <p>Empire Employee Portal</p> -->
-                HERE;
-              }
-          }
-          else {
-              echo <<< HERE
-              <h6>Incorrect UserName EmployeeID combo</h6>
-              <form action="login.php" method="POST">
-                <div class="container">
-                  <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
-              
-                  <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
-              
-         
-                </div>
-                <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
-              </form>
-              <!-- <p>Empire Employee Portal</p> -->
-              HERE;
-
-          }
-
-      }
-    
-      elseif ($_SERVER['REQUEST_METHOD']==="GET"){
-        echo <<< HERE
-        <form action="login.php" method="POST">
-          <div class="container">
-            <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
-        
-            <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
-        
-   
-          </div>
-          <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
-        </form>
-        <!-- <p>Empire Employee Portal</p> -->
-        HERE;
-
-    }
-    ?>
-      
+      <h3 class="heading">Secret Plans</h3>
+      <p>I will give you the plans if you ask nicely...</p>
     </article>
     <!-- ################################################################################################ -->
   </div>
 </div>
 
 
+<div class="wrapper row3">
+  <h6>Current Value:</h6>
+  <p>{
+    <br>
+  &emsp;"give_me_secret_plans"&nbsp;:&nbsp;"yes",
+<br>
+  }</p>
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+  <h6>silicon{DiAgRaM0fD3athStarWeaponMechanizm}</h6>
+  <img src ="static/images/dstarw.jpeg">
+</div>
 
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row4">
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
@@ -179,8 +111,8 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="layout/scripts/jquery.min.js"></script>
-<script src="layout/scripts/jquery.backtotop.js"></script>
-<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="static/layout/scripts/jquery.min.js"></script>
+<script src="static/layout/scripts/jquery.backtotop.js"></script>
+<script src="static/layout/scripts/jquery.mobilemenu.js"></script>
 </body>
 </html>
