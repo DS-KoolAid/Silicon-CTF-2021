@@ -1,0 +1,26 @@
+version: '3'
+services:
+    login_bot:
+        build: ./login_bot
+        container_name: login_bot
+        ports:
+            - "8081:8080"
+        networks:
+            - backend 
+    vault_server:
+        build: ./vault_server
+        container_name: vault_server
+        ports:
+            - "8345:80"
+        networks:
+            - backend
+    selenium_server:
+        build: ./selenium_server
+        container_name: selenium_server
+        networks:
+            - backend
+
+
+networks:
+    backend:
+        driver: bridge

@@ -1,12 +1,11 @@
 from app import app 
 from flask import render_template
 from flask import request
-from flask_basicauth import BasicAuth
 
 
 
-@app.route('/', methods = ['POST','GET',"PUT"])
-@app.route('/index.html',methods = ['POST','GET',"PUT"])
+@app.route('/', methods = ['GET',"PUT"])
+@app.route('/index.html',methods = ['GET',"PUT"])
 def home_page():
     return render_template('index.html')
 
@@ -17,5 +16,9 @@ def handle_patch():
     if data['give_me_secret_plans'] == "yes":
         return render_template('sol.html')
     else:
-        return "not quite"
+        return "not quite... check your data"
 
+@app.route('/', methods = ['POST'])
+@app.route('/index.html',methods = ['POST'])
+def handle_post():
+    return "Almost, try to PATCH my data"
