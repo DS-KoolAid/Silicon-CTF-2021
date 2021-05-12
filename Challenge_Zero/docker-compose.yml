@@ -1,5 +1,29 @@
 services:
-        web_empire_circuit:
-                build: . 
-                ports:
-                        - "8080:80"
+    web_empire_circuit:
+        build: . 
+        ports:
+            - "8080:80"
+        networks:
+            - challenge_zero
+        depends_on:
+            - database
+        environment:
+            - MYSQL_USER=web_user
+            - MYSQL_PASSWORD=Y6VfGe585VrYmu2ensZx
+        command: ["../wait-for-mysql.sh", "mysql-server_c0", "apache2-foreground"]
+    database:
+        build: ./mysql
+        container_name: mysql-server_c0
+        command: --default-authentication-plugin=mysql_native_password --sql_mode=""
+        restart: always
+        environment:
+            - MYSQL_ROOT_PASSWORD=3Yex8b76FzCeYCvqTd8c
+            - MYSQL_USER=web_user
+            - MYSQL_PASSWORD=Y6VfGe585VrYmu2ensZx
+            - MYSQL_DATABASE=c0
+        user: 1000:1000 
+        networks:
+            - challenge_zero
+networks:
+    challenge_zero:
+        driver: bridge
