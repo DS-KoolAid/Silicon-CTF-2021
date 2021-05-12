@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rebel Phishing Tool</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />    
+	<link href="static/layout/styles/templatemo-style.css" rel="stylesheet" />
+</head>
+<!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="static/images/jedivssith.jpeg">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							
+							<div class="tm-site-text-box" style="width: 500px; height: 100px;">
+								<img src="static/images/rebel_pin.jpeg" alt="Logo" class="tm-site-logo" height="50%"/> 
+								<h1 class="tm-site-title">Rebel Phishing Server</h1>
+								<<h6 class="tm-site-description">This <u>is</u> the link you are looking for...</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link active">Home</a></li>
+								<li class="tm-nav-li"><a href="test_link.html" class="tm-nav-link">Test_link</a></li>
+								<li class="tm-nav-li"><a href="send_link.html" class="tm-nav-link">Send_link</a></li>
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+                {% if test %}
+				<h2 class="col-12 text-center tm-section-title">Test Link Generation</h2>
+                <p>Remember, this is just a test. In order to send to the Empire, use the Send_Link page.</p>
+                <form action="test_link.html" method="POST">
+                {% else %}
+                <h2 class="col-12 text-center tm-section-title">Send Phishing Message To Storm Trooper</h2>
+                <p>After you press send, this will be sent to a Stormtrooper Administrator</p>
+                <form action="send_link.html" method="POST">
+                {% endif %}
+                    <div class="container">      
+                      <label>URL</label><br>
+                      <input type="text" style="color:black; width: 500px;" placeholder="https://challenge.silicon-ctf.party/web300/index.html" name="variable_name" required disabled><br>
+                      <label>Variable Name</label><br>
+                      <input type="text" style="color:black;" placeholder="Enter variable" name="variable_name" required><br>
+                      <label>Variable Value</label><br>
+                      <textarea type="text" style="color:black;" rows="4" cols="50" name="variable_value" required>Enter variable value</textarea><br>
+                  
+            
+                    </div>
+                    {% if test %}
+                    <button type="submit" style="color:black;">Generate Test Link <i class="fas fa-angle-right"></i></button>
+                    {% else %}
+                    <button type="submit" style="color:black;">Send Link <i class="fas fa-angle-right"></i></button>
+                    {% endif %}
+                  </form>
+				
+			</header>
+			
+
+
+	</div>
+	<script src="static/layout/scripts/jquery.min.js"></script>
+	<script src="static/layout/scripts/parallax.min.js"></script>
+</body>
+</html>

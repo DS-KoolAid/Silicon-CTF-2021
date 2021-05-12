@@ -1,0 +1,6 @@
+version: '3'
+services:
+    http_id_guess:
+        build: .
+        ports:
+            - "8765:8080"

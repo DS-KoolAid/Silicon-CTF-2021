@@ -30,9 +30,6 @@ $('#test').terminal({
      
         this.echo("(　-_･)σ - - - - - - - - ･");
     },
-    test: function(test){
-        this.echo(check_secret(test));
-    },
     get_flag: function(secret){
         if (!check_secret(secret)){
             this.echo("Not that easy!");

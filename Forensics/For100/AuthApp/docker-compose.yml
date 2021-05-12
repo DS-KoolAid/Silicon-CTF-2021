@@ -1,0 +1,6 @@
+version: '3'
+services:
+    basic_auth:
+        build: .
+        ports:
+            - "8235:8080"

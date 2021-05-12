@@ -1,0 +1,57 @@
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-web100
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-web100
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-web100
+    spec: 
+      containers: 
+      - name: challenge-web100
+        image: tcctf2021registry.azurecr.io/web100:latest 
+        imagePullPolicy: "Always"
+
+--- 
+
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-web100
+
+spec: 
+  ports: 
+  - port: 80 
+    targetPort: 80
+  selector: 
+    app: challenge-web100 
+
+--- 
+
+apiVersion: networking.k8s.io/v1beta1 
+kind: Ingress 
+metadata: 
+  name: challenge-web100-ingress 
+  annotations: 
+    kubernetes.io/ingress.class: nginx 
+    nginx.ingress.kubernetes.io/rewrite-target: /$1 
+    ingress.kubernetes.io/add-base-url: "true"
+spec: 
+  rules: 
+  - http: 
+      paths: 
+      - path: /web100/(.+)
+        pathType: Prefix
+        backend: 
+          serviceName: challenge-web100 
+          servicePort: 80 

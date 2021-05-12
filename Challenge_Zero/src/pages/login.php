@@ -86,12 +86,12 @@ Licence URI: https://www.os-templates.com/template-terms
               }
               else {
                 echo <<< HERE
-                <h6>Incorrect UserName Password combo</h6>
+                <h6>Incorrect UserName EmployeeID combo</h6>
                 <form action="login.php" method="POST">
                   <div class="container">
                     <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
                 
-                    <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+                    <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
                 
           
                   </div>
@@ -103,12 +103,12 @@ Licence URI: https://www.os-templates.com/template-terms
           }
           else {
               echo <<< HERE
-              <h6>Incorrect UserName Password combo</h6>
+              <h6>Incorrect UserName EmployeeID combo</h6>
               <form action="login.php" method="POST">
                 <div class="container">
                   <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
               
-                  <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+                  <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
               
          
                 </div>
@@ -127,7 +127,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <div class="container">
             <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
         
-            <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
+            <input type="password" style="color:black;" placeholder="Enter EmployeeID" name="psw" required>
         
    
           </div>
