@@ -14,7 +14,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-/head>
+</head>
 <body id="top">
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -53,7 +53,7 @@ Licence URI: https://www.os-templates.com/template-terms
         <li><a class="drop" href="#">Pages</a>
           <ul>
             <li><a href="login.php">Login</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
           </ul>
         </li>
 
@@ -84,13 +84,46 @@ Licence URI: https://www.os-templates.com/template-terms
       <!-- ################################################################################################ -->
       <div id="gallery">
         <figure>
-          <header class="heading">Gallery Title Goes Here</header>
-          <ul class="nospace clear">
+          <header class="heading">Gallery</header>
+          <form action="" method="post">
+          <?php 
+            $search_value=$_POST["search"];
+            echo '<input type="text" name="search" value="'.$search_value.'">';
+          ?>
+          <input type="submit" name="submit" value="Search by Post ID">
+          </form>
+          <br/>
+          <?php
+            $con=new mysqli('mysql-server_c0', 'root', '3Yex8b76FzCeYCvqTd8c', 'c0');
+            if($con->connect_error) {
+              echo 'Connection Failed: '.$con->connect_error;
+            } else {
+              $sql="select * from pages";
+              if(isset($search_value) && !empty($search_value)) {
+                $sql = "$sql where page_id = $search_value";
+              }
+
+              $res=$con->query($sql);
+              echo '<table class="nospace">';
+              echo '<tr><th>Page ID</th><th>Page Link</th><th>Page Name</th><th>Page Thumbnail</th></tr>';
+
+              while($row=$res->fetch_assoc()) {
+                  echo '<tr>';
+                  echo '<td>'.$row["page_id"].'</td>';
+                  echo '<td><a href="'.$row["page_uri"].'">Link to page - '.$row["page_uri"].'</a></td>';
+                  echo '<td>'.$row["page_title"].'</td>';
+                  echo '<td><img style="width:500px" src="../images/'.$row["page_thumbnail"].'" alt=""><br/>'.$row["page_thumbnail"].'</td>';
+                  echo '</tr>';
+              }
+              echo '</table>';
+            }
+          ?>
+          <!-- <ul class="nospace clear">
             <li class="one_quarter first"><a href="tie_fighter_speed.html"><img src="../images/tf.png" alt=""></a>Tie Fighters</li>
             <li class="one_quarter"><a href="storm_trooper_sharp_shooter.html"><img src="../images/st.png" alt=""></a>Storm Trooper Accuracy</li>
             <li class="one_quarter"><a href="death_star_reborn.html"><img src="../images/deathstar.jpeg" alt=""></a>Death Star Reborn</li>
 
-          </ul>
+          </ul> -->
         </figure>
       </div>
       <!-- ################################################################################################ -->
