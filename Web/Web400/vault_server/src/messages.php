@@ -23,14 +23,3 @@ function form_message($failure){
           echo $html_form;
         }
       }
-
-// function success_message(){
-//     $flag = load_flag();
-//     $html_login_success = <<< "EOT"
-//     <h6>login success</h6>
-//     <p> "$flag" </p>
-//     EOT;
-
-//     echo $html_login_success;
-
-// }
