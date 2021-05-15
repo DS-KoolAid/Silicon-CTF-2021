@@ -1,0 +1,53 @@
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-web300-mysql
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-web300-mysql
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-web300-mysql
+    spec: 
+      containers:
+      - name: challenge-web300
+        image: tcctf2021registry.azurecr.io/web300_mysql:latest 
+        imagePullPolicy: "Always"
+        args: 
+        - --default-authentication-plugin=mysql_native_password
+        env:
+        - name: MYSQL_DATABASE
+          value: silicon
+        - name: MYSQL_ROOT_PASSWORD
+          value: je6H92Gagf91Ha
+    #     volumeMounts:
+    #     - name: mysql-config-volume ## specify volume name
+    #       mountPath: /etc/mysql/conf.d/default_auth.cnf ## path to mount file
+    #       subPath: default_auth ## name of config
+    # volumes:
+    #   - name: mysql-config-volume ## volume name
+    #     configMap:
+    #       name: mysql-config-web300 ## name of ConfigMap
+
+        
+
+---
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-web300-mysql
+
+spec: 
+  ports: 
+  - port: 3306 
+    targetPort: 3306
+  selector: 
+    app: challenge-web300-mysql

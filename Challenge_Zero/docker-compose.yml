@@ -1,5 +1,6 @@
 services:
     web_empire_circuit:
+        image: tcctf2021registry.azurecr.io/challenge_zero_web:latest
         build: . 
         ports:
             - "8080:80"
@@ -12,6 +13,7 @@ services:
             - MYSQL_PASSWORD=Y6VfGe585VrYmu2ensZx
         command: ["../wait-for-mysql.sh", "mysql-server_c0", "apache2-foreground"]
     database:
+        image: tcctf2021registry.azurecr.io/challenge_zero_mysql:latest
         build: ./mysql
         container_name: mysql-server_c0
         command: --default-authentication-plugin=mysql_native_password --sql_mode=""

@@ -1,0 +1,61 @@
+
+
+
+
+---
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-web300
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-web300
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-web300
+    spec: 
+      containers: 
+      - name: challenge-web300
+        image: tcctf2021registry.azurecr.io/web300_web:latest 
+        imagePullPolicy: "Always"
+
+---
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-web300
+
+spec: 
+  ports: 
+  - port: 80 
+    targetPort: 8080
+  selector: 
+    app: challenge-web300 
+
+---
+apiVersion: networking.k8s.io/v1beta1 
+kind: Ingress 
+metadata: 
+  name: challenge-web300-ingress 
+  annotations: 
+    kubernetes.io/ingress.class: nginx 
+    nginx.ingress.kubernetes.io/rewrite-target: /$1 
+    ingress.kubernetes.io/add-base-url: "true"
+spec: 
+  rules: 
+  - http: 
+      paths: 
+      - path: /web300/(.+)
+        pathType: Prefix
+        backend: 
+          serviceName: challenge-web300 
+          servicePort: 8080
+

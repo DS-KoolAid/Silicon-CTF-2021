@@ -1,6 +1,7 @@
 version: '3'
 services:
     login_bot:
+        image : tcctf2021registry.azurecr.io/login_bot:latest
         build: ./login_bot
         container_name: login_bot
         ports:

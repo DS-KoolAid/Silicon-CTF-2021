@@ -17,11 +17,11 @@ def manage_c2_traffic():
         tmp=auth_ts+hard_coded_string
         sig_check=hashlib.md5(tmp.encode()).hexdigest()
         if sig_check == auth_sig:
-            return "success"
+            return "silicon{H3r3_7s_UR_P@yl0ad}"
         else:
-            return "who tf are you"
+            return "...who are you?"
     else:
-        return "nothing to see here"
+        return render_template('404.html')
     
     
 

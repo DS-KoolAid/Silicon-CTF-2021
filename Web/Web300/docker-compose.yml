@@ -1,6 +1,7 @@
 version: '3'
 services:
     mysql-sr-300:
+        image: tcctf2021registry.azurecr.io/web300_mysql:latest
         build: ./mysql
         container_name: mysql-server_web300
         command: --default-authentication-plugin=mysql_native_password --sql_mode=""
@@ -11,6 +12,7 @@ services:
         networks:
             - backend
     web-server-300:
+        image: tcctf2021registry.azurecr.io/web300_web:latest
         build: ./src
         ports:
             - "8234:8080"
