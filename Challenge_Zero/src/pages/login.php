@@ -82,7 +82,7 @@ Licence URI: https://www.os-templates.com/template-terms
           if (isset($name) && $name !== "" && isset($secret) && $secret !== "") {
               if ($name === "tc_trooper_174812" and $secret === "32145609") {
                   echo <<< HERE
-                  <h6>flag{B0rN_70_8E_R3b3ls}</h6>
+                  <h6>silicon{B0rN_70_8E_R3b3ls}</h6>
                   HERE;
               }
               else {
