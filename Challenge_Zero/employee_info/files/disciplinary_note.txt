@@ -1,0 +1,7 @@
+Emplpoyee Username: tc_trooper_174812
+EmployeeID: ***-**-****
+Date: 2045-04-06
+Infraction: The employee was found posting sensitive information (EmployeeID) on social media. This kind of data breach could allow for unauthorized access to our employee portal.
+Disciplinary Action: The employee must remove the post from their social media and obtain a new EmployeeID. This is their first warning.
+
+**REMINDER DO NOT POST PICTURES OF BADGE ANYWHERE ONLINE! THIS CONTAINS YOUR SECRET EMPLOYEEID NUMBER!**

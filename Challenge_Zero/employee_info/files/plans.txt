@@ -1,0 +1,198 @@
+_______ _ _ _ __ __ __  _ ___ _   __  ___  __ __  __  _  ___ _ _  __ _______
+%=x%=x% | |V| |_)|_ |_) | |_| |   |_) |_| (_  |_  |_) |  |_| |\| (_  %=x%=x%
+~~~~~~~ | | | |  |_ | \ | | | |_  |_) | | __) |_  |   |_ | | | | __) ~~~~~~~
+ LS
+                 .-. .-.
+               .=========.         E x t e r i o r ,   A e r i a l   V i e w
+               ||.-.7.-.||         -----------------------------------------
+               ||`-' `-'||
+               `========='
+                `-'| |`-'8               1 .............. Sensor Suite Tower
+          ______   |9|   ______          2 ... Heavy Twin Turbolaser Turrets
+         /     /\__| |__/\     \         3 ............. Heavy Laser Turrets
+        /  \_ / /  |_|  \ \ _/  \        4 ....... TIE Fighter Launch Chutes
+       /___(\\\/         \///)___\       5 ............... Heavy Blast Doors
+       \____\\`==========='//____/       6 .................... Guard towers
+       /     '/ .-------. \\     \       7 ........ Shuttle Landing Platform
+    __/     //. \`+---+'/ .\\     \__    8 ........... AT-AT Docking Station
+   /\ \    ///x`.\|___|/.'x\\\    / /\   9 ................. Connecting Ramp
+  /  \ \  //`-._//|   |\\_.2'\\  / /  \
+ /  _.-==='_____//.-=-.\\_____`===-._  \
+ \   `-===.\-.  \ `-=1' /  .-/.===-' 3 / The pre-fabricated,  multi-function
+  \  / /  \\\ \  \.===./  /4///  \ \  /  Imperial garrison base is the back-
+   \/_/    \\\ | /.---.\ | ///    \_\/   bone of the  Empire's  occupational
+      \     \\\|/ |_m_| \|///     /      forces. These heavily-armoured for-
+       \_____\=============/_____/       tresses have  walls up to 10 meters
+       /____///    ___    \\\____\       thick  to  guard   against   ground
+       \   (_//\__|||||__/\\_)   /       assaults,  and  powerful  deflector
+        \  /  \|,,|||||,,|/  \  /        shields  protect  them  for  air or
+         \_____|  | 5 | 6|_____/         space attacks.
+               `--'   `--'
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                           U           E x t e r i o r ,   S i d e   V i e w
+                          /_\          -------------------------------------
+                       1 [___]
+                         :`:':           1 .............. Sensor Suite Tower
+                         `:::'           2 ... Heavy Twin Turbolaser Turrets
+                  _       :_:       _    3 ............. Heavy Laser Turrets
+                =[ ]2     [%]      [ ]=  4 ....... Tie Fighter Launch Chutes
+                 :=:      :=:      :=:   5 ............... Heavy Blast Doors
+                _|_|_   __| |__   _|_|_  6 .................... Guard Towers
+               / /XX|\ /__|_|__\ /|XX\ \
+         3    /4/XXX| | _/___\_ | |XXX\ \             7 ....... AT-AT Walker
+    --===____/--===X|_|/_______\|_|X===--\____===--   8 ........ AT-ST Scout
+     /__| |     /l_\\             //_|\     |_|__\
+    /~~.' |    /:'  \\   _____   //  `:\    | `.  \
+   /   | .'   / |    \\==|||||==//    | \   `. |   \   7    8
+  /   .' |   / .'     |  ||5|| 6|     `. \   | `.   \  xx=   _
+ /____|__|__/__|______l__|||||__l______|__\__|__|____\ ll   <~
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                                 O u t e r   D e f e n s e s
+            |                      |             ---------------------------
+         ^_[]_^                 ^_[]_^
+         |----|               5 |----|        1 ... High Voltage Death Fence
+ ________`-..-'________4________`-..-'______  2 ....... Perimeter Gate House
+ ===========================================  3 ........ Powered Force Field
+          `||'                   `||'         4 .......... Fortified Catwalk
+           ||     ^==^   ^==^     ||          5 .......... Observation tower
+ ___.____._ll_._1_|--|   |--|___._ll_.____.____
+ XXX|XXXX|XIIX|XXX|--| 3 |--|XXX|XIIX|XXXX|XXXX
+ XXX|XXXX|XIIX|XXX| 2|   |  |XXX|XIIX|XXXX|XXXX
+
+ The outer perimeter is  marked  by a  high-voltage  "death fence."  Powered
+ force fields  placed at regular intervals along the fence may be turned off
+ to permit entry and exit.  Observation towers,  connected by fortified cat-
+ walks,  are set back from the fence and constantly manned by stormtroopers.
+ Other outer  defenses  include energy mine fields,  modified patrol Droids,
+ and AT-ST Scout Walkers.
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+             _
+            /|                               L a n d i n g   P l a t f o r m
+          -==+                               -------------------------------
+            :
+         [__________]               Up to two Lambda-class shuttles and four
+         `' ||  ||`-'               AT-AT  Walkers can dock at the platform.
+           ========  =xx            A loading  ramp  leads directly from the
+            ||  ||    ll            platform into the garrison complex.
+     ~~~~~~~~~~~~~~~~~~~~~~
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                     I n t e r i o r ,   L e v e l s   1 - 5
+                                     ---------------------------------------
+
+          ______         ______      The first 5 levels of the garrison com-
+         / ____ \_______/ ____ \     plex are of identical layout, construc-
+        / /    \_________/    \ \    ted  around  a  level-spanning  surface
+       / /      |   3   |  5   \ \   vehicle bay.  Refer to the key below to
+       \ \       \_____/_______/ /   determine what each level contains.
+       / /    o   |o o|   o    \ \
+    __/ /  2    .' o4o `.    6  \ \__    1 ... Storage Gallery (levels 1-2),
+   / __/      .' ._o_o_. `.      \__ \         Armory (levels 3-4), Training
+  / /  `-.  .' .'  10   `. `.  .-'  \ \        Facilities   and   Recreation
+ / /      ~' .'`-._____.-'`. `~      \ \       Rooms (level 5)
+ \ \     o  <  C  | | |  D  >  o  7  / / 2 ... Stormtrooper Barracks (levels
+  \ \__      \    ' ' '    /      __/ /        1-3),    Security    Barracks
+   \__ \  1  |----  9  ----|~-._ / __/         (levels 4-5)
+      \ \    |====    B====|    Y /      3 ...... Base Security (levels 1-5)
+       \ \   |----     ----|   / /       4 ......... Turbolifts (levels 1-6)
+       / /   |__A_     _ __| 8 \ \       5 .... Detention Block (levels 1-5)
+       \ \      | |   | |      / /       6 ... Technical and Service Person-
+        \ \_____| |   | |_____/ /              nel Barracks (levels 1-5)
+         \_____ `o|   |o' _____/         7 ... Technical Shops (levels 1-2),
+               `--'   `--'                     Medical   Bay    (level   3),
+                                               Science Labs (levels 4-5)
+                8 ... Storage Gallery (levels 1-2), Droid Shops (levels 3-5)
+                9 ...................... Surface Vehicle  Bay  (levels 1-5):
+                A .................................. AT-ST Scout Walker Bays
+                B ........................................ AT-AT Walker Bays
+                C ...................... Vehicle Maintenance and Repair Deck
+                D ........................................ Speeder Bike Deck
+                10 ........................... Miscellaneous Vehicle Parking
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                           I n t e r i o r ,   L e v e l   6
+                                           ---------------------------------
+         ____           ____
+        / __ \_________/ __ \        Base command personnel,  control rooms,
+       / /  \___________/  \ \       trade mission,  and  diplomatic offices
+       \ \ o     oo      o / /       are located on this level.
+       / /       oo----.   \ \
+      / /   8  __oo     `.1 \ \      1 ....... Sensor Monitors, Tractor Beam
+   __/ /\    .~  ||   2   \  \ \__                       and Shield Controls
+  / __/  \ .' 9.-'`-.      | /\__ \  2 ....................... Computer Room
+ / /   o  \|__:   o  :_____|/ o  \ \ 3 ....................... Meeting Rooms
+ \ \__  7 .---: 10   :------.3 __/ / 4 ...... Officers' and Pilots' Quarters
+  \__ \  /     `-..-'        \/ __/  5 ... Trade Mission, Diplomatic Offices
+     \ \/\   5   ||          / /     6 ........... Base Commander's Quarters
+      \ \ `.     ||    4    / /                                  and offices
+       \ \ o~`---||      o / /       7 ............ Officer Recreation Rooms
+       / /6  ____||_____   \ \       8 ............................. Offices
+       \ \__/ _________ \__/ /       9 ................... Base Control Room
+        \____/         \____/        10 ..................... Reception Area
+
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                           I n t e r i o r ,   L e v e l   7
+                                           ---------------------------------
+        __             __
+       /_]\           /[_\        The TIE Fighter  Hanger  Deck  houses  the
+       \ \,===========./ /        garrison's TIE fighters in standard-design
+       //:o-----------o:\\        ceiling racks.  Bases are usually equipped
+      /// X  X X X X  X \\\       with  30 TIE fighters and five TIE bombers
+     /// X X  X_X_X  X X \\\      (a single  bomber  takes  up the same rack
+  __/// X X   [___]   X X \\\__   space as two fighters).  Five  to 15 ships
+ /\_/o X X  1 &/3\&    X X o\_/\  are on constant  patrol,  depending on the
+ \]_\\ X X   <\\_//>       //_[/  base's readiness level.
+    \\\ X X   \>&</2  X []///
+     \\\ X X   []    X []///      1 .............. TIE Fighter Ceiling Racks
+      \\\ X   [] []     ///                           (holds up to 40 craft)
+       \\:o-----------o://        2 ............. Lift Platforms, to Level 8
+       /_/`==========='\_\        3 .................. Flight Control Center
+       \_]/           \[_/        X ............................ TIE Fighter
+                                  [] ............................ TIE Bomber
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                                           I n t e r i o r ,   L e v e l   8
+                                           ---------------------------------
+                                                      (not shown)
+
+  The Flight Deck contains the  tractor beam  generators which catapult out-
+  going craft into the open sky and reel in landing ships. Pilots relinquish
+  control of  their ships during take off and landing because of the limited
+  maneuvering area within the chutes.
+
+____________________________________________________________________________
+%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%=x%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                               S u b - L e v e l   I n s t a l l a t i o n s
+                               ---------------------------------------------
+                                                (not shown)
+
+  A large underground section of the base  houses the main power and back-up
+  generators, the tractor beam and deflector shield generators, the environ-
+  ment  control  station,  and  the  waste  disposal and refuse units.  Some
+  storage facilities are also located here.
+
+# http://www.ascii-art.de/ascii/s/starwars.txt

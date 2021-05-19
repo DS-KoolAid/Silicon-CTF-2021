@@ -2,7 +2,7 @@ FROM php:7-apache
 
 ADD index.html /var/www/html/
 
-ADD employee_info.zip /var/www/html
+ADD documents.zip /var/www/html
 
 ADD wordlist.txt /var/www/html/
 

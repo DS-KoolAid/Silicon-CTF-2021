@@ -63,6 +63,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
   </section>
 </div>
+<!-- TODO: Sanitize user input on search box for gallery page. See OWASP A1 -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -98,24 +99,28 @@ Licence URI: https://www.os-templates.com/template-terms
             if($con->connect_error) {
               echo 'Connection Failed: '.$con->connect_error;
             } else {
-              $sql="select * from pages";
+              $sql="select * from pages where is_draft=0";
               if(isset($search_value) && !empty($search_value)) {
-                $sql = "$sql where page_id = $search_value";
+                $sql = "$sql and page_id=$search_value";
               }
 
               $res=$con->query($sql);
-              echo '<table class="nospace">';
-              echo '<tr><th>Page ID</th><th>Page Link</th><th>Page Name</th><th>Page Thumbnail</th></tr>';
+              if(!$res) {
+                echo '<p style="color:red">Error with query: '.$sql.'</p>';
+              } else {
+                echo '<table class="nospace">';
+                echo '<tr><th>Page ID</th><th>Page Link</th><th>Page Name</th><th>Page Thumbnail</th></tr>';
 
-              while($row=$res->fetch_assoc()) {
-                  echo '<tr>';
-                  echo '<td>'.$row["page_id"].'</td>';
-                  echo '<td><a href="'.$row["page_uri"].'">Link to page - '.$row["page_uri"].'</a></td>';
-                  echo '<td>'.$row["page_title"].'</td>';
-                  echo '<td><img style="width:500px" src="../images/'.$row["page_thumbnail"].'" alt=""><br/>'.$row["page_thumbnail"].'</td>';
-                  echo '</tr>';
+                while($row=$res->fetch_assoc()) {
+                    echo '<tr>';
+                    echo '<td>'.$row["page_id"].'</td>';
+                    echo '<td><a href="'.$row["page_uri"].'">Link to page - '.$row["page_uri"].'</a></td>';
+                    echo '<td>'.$row["page_title"].'</td>';
+                    echo '<td><img style="width:500px" src="../images/'.$row["page_thumbnail"].'" alt=""><br/>'.$row["page_thumbnail"].'</td>';
+                    echo '</tr>';
+                }
+                echo '</table>';
               }
-              echo '</table>';
             }
           ?>
           <!-- <ul class="nospace clear">

@@ -5,11 +5,5 @@
 ░╚═══██╗██║██║░░░░░██║╚════╝██║░░██╗██║░░██║██║╚████║  ██║░░██╗░░░██║░░░██╔══╝░░
 ██████╔╝██║███████╗██║░░░░░░╚█████╔╝╚█████╔╝██║░╚███║  ╚█████╔╝░░░██║░░░██║░░░░░
 ╚═════╝░╚═╝╚══════╝╚═╝░░░░░░░╚════╝░░╚════╝░╚═╝░░╚══╝  ░╚════╝░░░░╚═╝░░░╚═╝░░░░░
-                                                                                      
-
-
-Emplpoyee Username: tc_trooper_174812
-EmployeeID: ***-**-****
-
-
-**REMINDER DO NOT POST PICTURES OF BADGE ANYWHERE ONLINE! THIS CONTAINS YOUR SECRET EMPLOYEEID NUMBER!**
+                                                                                                                                                                                                                                 
+Welcome to the CTF. We're glad you're here. Hope you're having fun :)
