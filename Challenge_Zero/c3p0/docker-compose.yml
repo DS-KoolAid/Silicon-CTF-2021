@@ -1,0 +1,6 @@
+services:
+    web_empire_circuit:
+        image: tcctf2021registry.azurecr.io/c3p:latest
+        build: . 
+        ports:
+            - "8080:80"
