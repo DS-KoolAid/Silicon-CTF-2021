@@ -2,7 +2,6 @@
 
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p>Be sure to log your CSE's for your Continued Sith Education.... or you lose your connection with the dark side</p>
     <div class="one_third first">
       <h6 class="heading">Remember...</h6>
       <p>We are watching...</p>

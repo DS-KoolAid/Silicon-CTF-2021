@@ -66,20 +66,5 @@ class DBActions:
 
         
 
-            
 
-    # def get_user_iocs(self,user):
-    #     table_name=config['DBConfig']['TRACKER_TABLE'].strip("'")
-    #     query = f"SELECT IOC_TYPE, IOC, tc_id, TIME FROM {table_name} WHERE NAME = %s"
-    #     try:
-    #         self.cursor.execute(query,(user,))
-    #         records = self.cursor.fetchall()
-    #         rec_array=[]
-    #         for i in records:
-    #             rec={'IOC_type':i[0], 'ioc': i[1], 'id':i[2], 'TIME': i[3]}
-    #             rec_array.append(rec)
-    #         return rec_array
-    #     except Exception as err:
-    #         self._handle_error(err)
-    #         return []
 

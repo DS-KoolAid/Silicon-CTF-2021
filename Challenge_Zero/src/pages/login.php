@@ -79,7 +79,7 @@ Licence URI: https://www.os-templates.com/template-terms
           $secret = $_POST["psw"];
 
           if (isset($name) && $name !== "" && isset($secret) && $secret !== "") {
-              if ($name === "tc_174812" and $secret === "3f3f85v3da") {
+              if ($name === "tc_trooper_174812" and $secret === "32145609") {
                   echo <<< HERE
                   <h6>flag{B0rN_70_8E_R3b3ls}</h6>
                   HERE;

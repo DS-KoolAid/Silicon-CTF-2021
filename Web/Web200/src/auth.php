@@ -3,7 +3,7 @@
 
 function check_login($uname, $psw){
 
-    if ($uname === "temp_login" && $psw === "StormTrooperRulez"){
+    if ($uname === "stormtrooper2" && $psw === "StormTrooperRulez"){
         return true;
     }
     else{

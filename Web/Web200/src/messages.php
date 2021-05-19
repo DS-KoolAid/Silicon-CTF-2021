@@ -29,7 +29,8 @@ function success_message($type){
     if ($type === 1){
         $html_login_success = <<< "EOT"
         <h6>login success</h6>
-        <p> silicon{WelcomAdmin!} </p>
+        <h6> User ID: 1</h6>
+        <p> silicon{StromTroopersGottaEatToo} </p>
         EOT;
 
     }
@@ -37,9 +38,23 @@ function success_message($type){
         $html_login_success = <<< "EOT"
         <h6>login success</h6>
         <h6> User ID: 2</h6>
-        <p> Welcome Trooper! </p>
+        <p> Welcome Trooper!<br>You are scheduled to patrol 5am-11am </p>
         EOT;
     }
+    elseif ($type === 3){
+      $html_login_success = <<< "EOT"
+      <h6>login success</h6>
+      <h6> User ID: 3</h6>
+      <p> Welcome Trooper!<br>You are scheduled to patrol 12pm-5pm </p>
+      EOT;
+  }
+  elseif ($type === 4){
+    $html_login_success = <<< "EOT"
+    <h6>login success</h6>
+    <h6> User ID: 4</h6>
+    <p> Welcome Trooper!<br>You are scheduled to patrol 5pm-5am </p>
+    EOT;
+}
     else{
         $html_login_success = <<< "EOT"
         <h6>login success</h6>

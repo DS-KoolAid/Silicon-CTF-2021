@@ -41,21 +41,45 @@ spec:
     app: challenge-web300 
 
 ---
-apiVersion: networking.k8s.io/v1beta1 
-kind: Ingress 
-metadata: 
-  name: challenge-web300-ingress 
-  annotations: 
-    kubernetes.io/ingress.class: nginx 
-    nginx.ingress.kubernetes.io/rewrite-target: /$1 
-    ingress.kubernetes.io/add-base-url: "true"
-spec: 
-  rules: 
-  - http: 
-      paths: 
-      - path: /web300/(.+)
-        pathType: Prefix
-        backend: 
-          serviceName: challenge-web300 
-          servicePort: 8080
+# apiVersion: networking.k8s.io/v1beta1 
+# kind: Ingress 
+# metadata: 
+#   name: challenge-web300-ingress 
+#   annotations: 
+#     kubernetes.io/ingress.class: nginx 
+#     nginx.ingress.kubernetes.io/rewrite-target: /$1 
+#     ingress.kubernetes.io/add-base-url: "true"
+# spec: 
+#   rules: 
+#   - http: 
+#       paths: 
+#       - path: /web300/(.+)
+#         pathType: Prefix
+#         backend: 
+#           serviceName: challenge-web300 
+#           servicePort: 8080
 
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^(/web300)$ $1/index.html permanent;
+  name: challenge-web300-ingress
+  namespace: default
+spec:
+  tls:
+  - hosts:
+    - challenges.silicon-ctf.party
+    secretName: tls-secret
+  rules:
+  - host: challenges.silicon-ctf.party
+    http:
+      paths:
+      - backend:
+          serviceName: challenge-web300
+          servicePort: 8080
+        path: /web300(/|$)(.*)
+        pathType: Prefix

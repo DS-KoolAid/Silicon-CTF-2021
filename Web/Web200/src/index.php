@@ -1,12 +1,12 @@
 <!-- Include header -->
 <?php include("header.php");?>
 
-<div class="wrapper bgded overlay" style="background-image:url('../images/banner.jpeg'); background-position: center; background-size: cover;">
+<div class="wrapper bgded overlay" style="background-image:url('images/banner.jpeg'); background-position: center; background-size: cover;">
   <div id="pageintro" class="hoc clear"> 
 
     <article>
 
-      <h3 class="heading">Sith Login</h3>
+      <h3 class="heading">Storm Trooper Landing Dock Patrol Scheduler</h3>
       <?php
       require_once("auth.php");
       require_once("messages.php");
@@ -14,7 +14,7 @@
       if ($_SERVER['REQUEST_METHOD']=='POST'){
 
         if (!isset($_POST['id']) && isset($_POST['uname'])){
-            if ($_POST['uname']==="temp_login"){
+            if ($_POST['uname']==="stormtrooper2"){
                 $_POST['id'] = 2;
             }
         }
@@ -28,8 +28,14 @@
                   elseif ($id_num === 2){
                       success_message(2);
                   }
+                  elseif ($id_num === 3){
+                    success_message(3);
+                }
+                elseif ($id_num === 4){
+                  success_message(4);
+              }
                   else{
-                      success_message(3);
+                      success_message(5);
                   }
 
               }

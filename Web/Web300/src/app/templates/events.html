@@ -60,12 +60,13 @@ Licence URI: https://www.os-templates.com/template-terms
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('static/images/1stday.jpeg'); background-position: center fixed;">
+<div class="wrapper bgded overlay" style="background-image:url('static/images/1stday.png'); background-position: center fixed;background-size: auto;">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article>
       <h3 class="heading">Welcome Troopers!</h3>
       <p>Please review your First Day Agenda</p>
+      <br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br>
     </article>
     <!-- ################################################################################################ -->
   </div>
@@ -75,7 +76,7 @@ Licence URI: https://www.os-templates.com/template-terms
 <div class="wrapper row3">
   <article>
   {% for i in events %}
-    <br><h5><a href="event_details?event={{ i['event_name'] }}">{{ i['event_name'] }}</a> - {{ i['event_time'] }}</h5><br>
+    <br><h4><a href="event_details?event={{ i['event_name'] }}">{{ i['event_name'] }}</a> - {{ i['event_time'] }}</h4><br>
   {% endfor %}
 </article>
 </div>
