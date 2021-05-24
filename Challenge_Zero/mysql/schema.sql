@@ -32,3 +32,7 @@ INSERT INTO pages VALUES (3,'death_star_reborn.html','Death Star Reborn', 'death
 INSERT INTO pages VALUES (4,'redacted.html','REDACTED - Super Secret Plans Message', 'plan.jpg', 1);
 
 INSERT INTO secret_pages VALUES (1,'super_secret_plans_message.html','Super Secret Plans Message', 'plan.jpg', 0);
+
+CREATE USER 'c0_read'@'%' IDENTIFIED BY 'urzYY3UbAuFM2m5m369PKL8pDJuNtX@';
+GRANT SELECT ON c0.* TO 'c0_read'@'%';
+FLUSH PRIVILEGES;

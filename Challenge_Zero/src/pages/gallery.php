@@ -95,7 +95,7 @@ Licence URI: https://www.os-templates.com/template-terms
           </form>
           <br/>
           <?php
-            $con=new mysqli('mysql-server_c0', 'root', '3Yex8b76FzCeYCvqTd8c', 'c0');
+            $con=new mysqli('mysql-server_c0', 'c0_read', 'urzYY3UbAuFM2m5m369PKL8pDJuNtX@', 'c0');
             if($con->connect_error) {
               echo 'Connection Failed: '.$con->connect_error;
             } else {
