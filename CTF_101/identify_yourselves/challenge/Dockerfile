@@ -18,7 +18,7 @@ chmod 750 /app/bin && \
 chown -R root: /app
 COPY ./ca/chain.crt /app/chain.pem
 COPY ./ca/server.key /app/server.key
-COPY ./ca/challenge-ca.ini /home/sili/ca.ini
+COPY ./ca/challenge-ca.ini /home/sili/ca.cnf
 COPY assets/conf/motd /etc/motd
 COPY assets/scripts/entrypoint.sh /app/entrypoint.sh
 RUN chown -R sili: /home/sili

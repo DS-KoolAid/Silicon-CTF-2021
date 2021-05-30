@@ -7,6 +7,6 @@ mkdir db
 echo '1005'>db/serial
 openssl req -new -key client.key -out client.csr -subj '/CN=client/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US'
 touch ./db/ca.db
-openssl ca -config ca.ini -in client.csr -out client.crt
+openssl ca -config ca.cnf -in client.csr -out client.crt
 cat client.key client.crt ca.crt > client_chain.pem
 curl -v -k --cert ./client_chain.pem https://localhost
