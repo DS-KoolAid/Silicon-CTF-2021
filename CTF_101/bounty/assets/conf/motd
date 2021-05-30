@@ -1,0 +1,30 @@
+           |~
+           |.---.
+          .'_____`. /\
+          |~xxxxx~| ||
+          |_  #  _| ||
+     .------`-#-'-----.
+    (___|\_________/|_.`.
+     /  | _________ | | |
+    /   |/   _|_   \| | |
+   /   /X|  __|__  |/ `.|
+  (  --< \\/    _\//|_ |`.
+  `.    ~----.-~=====,:=======
+    ~-._____/___:__(``/| |
+      |    |      XX|~ | |
+       \__/======| /|  `.|
+       |_\|\    /|/_|    )
+       |_   \__/   _| .-'
+       | \ .'||`. / |(_|
+    LS |  ||.'`.||  |   )
+       |  `'|  |`'  |  /
+       |    |  |    |\/
+
+=======================================================================
+
+I was hired to collect a bounty for a wanted fugitive and stumbled
+on an old imperial base. I checked the computer systems and one of
+them still has a nameserver running. Strange, but it looks like it's
+listening on UDP and TCP. Maybe you can extract information from it?
+
+=======================================================================
