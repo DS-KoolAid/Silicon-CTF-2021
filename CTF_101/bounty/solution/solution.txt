@@ -1,3 +1,5 @@
+# This challenge's inspiration came from BSidesSF CTF 2021
+
 # This Bind server has port 53 listening on UDP as well as TCP
 # which is what's used for zone transfers. Using dig to initiate
 # an A record transfer will reveal the flag.
