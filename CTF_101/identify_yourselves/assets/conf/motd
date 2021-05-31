@@ -47,7 +47,8 @@
 
 Listen, we're trying to infiltrate an enemy ship but it's detected us and demanding
 that we identify ourselves. The authentication mechanism is an HTTPS server and we
-think there may be a weakness we can take advantage of. Can you craft an authentication
-response so we can get close enough to board their ship?
+think there may be a weakness we can take advantage of. Some intelligence gathered
+helped us build a couple pieces you might need.  Can you make something from them
+and craft an authentication response so we can get close enough to board their ship?
 
 =================================================================================

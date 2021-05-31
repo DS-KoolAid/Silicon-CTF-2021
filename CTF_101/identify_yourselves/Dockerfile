@@ -21,7 +21,8 @@ COPY ./ca/server.key /app/server.key
 COPY ./ca/challenge-ca.ini /home/sili/ca.cnf
 COPY assets/conf/motd /etc/motd
 COPY assets/scripts/entrypoint.sh /app/entrypoint.sh
-RUN chown -R sili: /home/sili
+RUN mkdir /home/sili/db && \
+chown -R sili: /home/sili
 
 ENV LISTEN_ADDR 0.0.0.0:443
 ENV CERT_FILE /app/chain.pem
