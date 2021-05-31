@@ -1,0 +1,109 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4101 (0x1005)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: OU=Auth CA, O=Silicon CTF, L=Folsom, ST=California, C=US
+        Validity
+            Not Before: May 28 19:02:55 2021 GMT
+            Not After : Jun  7 19:02:55 2022 GMT
+        Subject: O=Silicon CTF, OU=Auth CA, CN=localhost
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:cc:7a:3e:7d:63:7c:8c:32:ea:54:7a:e2:f2:40:
+                    c1:d9:93:ea:f3:fb:48:30:2d:83:0d:82:67:f1:12:
+                    b7:a2:0a:68:51:b4:37:d7:33:8d:b5:c0:28:10:f3:
+                    8f:6c:5a:07:3d:48:34:35:fe:4c:50:43:cb:48:9a:
+                    54:5a:4a:7a:87:6e:83:e1:2a:de:7f:9a:04:ad:2f:
+                    fd:c1:19:13:d1:ae:84:0d:96:cd:e0:e9:b4:13:40:
+                    af:e4:d7:d5:b0:43:27:38:00:d6:cf:2b:0a:39:c9:
+                    f4:61:4a:18:d4:4b:05:7c:c1:4c:5f:71:96:f2:8e:
+                    96:ff:c0:3d:31:99:fb:bd:16:45:e4:bd:a3:ec:d5:
+                    1f:e8:d7:20:87:9d:1f:59:a9:cd:4e:d8:ff:80:59:
+                    f0:6f:de:b6:cb:8d:bb:83:84:3c:34:c2:36:bc:79:
+                    b6:50:99:0f:21:20:12:5a:47:3a:8e:bd:8e:ee:a8:
+                    c8:b8:e6:9c:1e:f0:9d:66:5e:96:ac:be:1d:d0:a6:
+                    58:b0:c4:8e:cf:fe:ad:78:8b:3c:a8:09:14:64:19:
+                    3a:10:86:6b:45:28:e8:d8:b6:6d:18:a6:ff:4b:81:
+                    5e:80:4b:e7:21:74:5b:19:60:10:06:d2:68:36:59:
+                    b6:4f:a0:d3:ed:21:39:9b:b4:a0:42:84:6e:56:9e:
+                    24:59
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                E0:A0:3B:C6:BD:C1:4D:E5:3D:15:42:87:89:F2:E5:F0:11:98:CC:00
+            X509v3 Authority Key Identifier: 
+                keyid:DB:A4:37:D0:10:2D:46:B1:62:7F:F8:14:57:60:38:93:8C:58:63:5A
+                DirName:/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US
+                serial:33:5D:E7:EF:71:F8:92:74:23:3F:CE:67:4D:EE:C4:28:AB:C1:81:A5
+
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Subject Alternative Name: 
+                DNS:localhost
+    Signature Algorithm: sha256WithRSAEncryption
+         07:a5:aa:2f:e8:2d:33:b5:6f:6d:58:a1:d3:34:09:4f:5b:8c:
+         d9:80:82:0a:40:ed:77:7d:56:8a:29:d8:30:a4:3d:da:21:eb:
+         8f:33:04:9c:ff:ec:96:ee:29:20:f6:46:3a:18:8d:cd:98:1d:
+         44:5d:79:fc:7e:73:71:a8:bc:7b:2b:a4:45:87:f2:99:15:69:
+         9c:8a:bc:0a:e2:d3:73:69:7a:aa:2b:08:61:7f:0e:51:62:c2:
+         a6:6f:7f:73:9d:87:73:42:4c:b1:33:9c:a2:18:36:d7:98:00:
+         51:6d:57:36:e5:1b:8a:7a:1b:76:ed:d8:05:32:d8:03:a8:c6:
+         6b:20:57:8c:c4:85:7f:38:2a:ed:be:e0:64:61:a7:1b:bc:7a:
+         3c:00:5e:ab:7d:05:b1:57:40:b4:1f:84:df:56:58:a8:73:bd:
+         f8:e5:d3:48:22:b5:d3:a6:59:b6:dd:7d:13:10:1c:56:5a:56:
+         17:b2:7a:5a:b3:5a:5a:8c:68:b6:57:03:d3:ca:d2:c1:17:ce:
+         79:92:3d:d3:e0:7b:87:16:19:6b:ff:b7:e7:8a:fb:e9:f9:6a:
+         b1:42:35:6f:00:b4:08:35:ca:8a:ff:aa:2d:15:f0:11:cc:7b:
+         24:1b:fb:ee:d2:d2:2c:6c:a6:b5:4e:d8:c0:79:59:f5:85:1a:
+         dd:c7:ef:9b
+-----BEGIN CERTIFICATE-----
+MIIEBTCCAu2gAwIBAgICEAUwDQYJKoZIhvcNAQELBQAwWzEQMA4GA1UECwwHQXV0
+aCBDQTEUMBIGA1UECgwLU2lsaWNvbiBDVEYxDzANBgNVBAcMBkZvbHNvbTETMBEG
+A1UECAwKQ2FsaWZvcm5pYTELMAkGA1UEBhMCVVMwHhcNMjEwNTI4MTkwMjU1WhcN
+MjIwNjA3MTkwMjU1WjA8MRQwEgYDVQQKDAtTaWxpY29uIENURjEQMA4GA1UECwwH
+QXV0aCBDQTESMBAGA1UEAwwJbG9jYWxob3N0MIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAzHo+fWN8jDLqVHri8kDB2ZPq8/tIMC2DDYJn8RK3ogpoUbQ3
+1zONtcAoEPOPbFoHPUg0Nf5MUEPLSJpUWkp6h26D4Sref5oErS/9wRkT0a6EDZbN
+4Om0E0Cv5NfVsEMnOADWzysKOcn0YUoY1EsFfMFMX3GW8o6W/8A9MZn7vRZF5L2j
+7NUf6Ncgh50fWanNTtj/gFnwb962y427g4Q8NMI2vHm2UJkPISASWkc6jr2O7qjI
+uOacHvCdZl6WrL4d0KZYsMSOz/6teIs8qAkUZBk6EIZrRSjo2LZtGKb/S4FegEvn
+IXRbGWAQBtJoNlm2T6DT7SE5m7SgQoRuVp4kWQIDAQABo4HxMIHuMAwGA1UdEwEB
+/wQCMAAwHQYDVR0OBBYEFOCgO8a9wU3lPRVCh4ny5fARmMwAMIGYBgNVHSMEgZAw
+gY2AFNukN9AQLUaxYn/4FFdgOJOMWGNaoV+kXTBbMRAwDgYDVQQLDAdBdXRoIENB
+MRQwEgYDVQQKDAtTaWxpY29uIENURjEPMA0GA1UEBwwGRm9sc29tMRMwEQYDVQQI
+DApDYWxpZm9ybmlhMQswCQYDVQQGEwJVU4IUM13n73H4knQjP85nTe7EKKvBgaUw
+DgYDVR0PAQH/BAQDAgWgMBQGA1UdEQQNMAuCCWxvY2FsaG9zdDANBgkqhkiG9w0B
+AQsFAAOCAQEAB6WqL+gtM7VvbVih0zQJT1uM2YCCCkDtd31WiinYMKQ92iHrjzME
+nP/slu4pIPZGOhiNzZgdRF15/H5zcai8eyukRYfymRVpnIq8CuLTc2l6qisIYX8O
+UWLCpm9/c52Hc0JMsTOcohg215gAUW1XNuUbinobdu3YBTLYA6jGayBXjMSFfzgq
+7b7gZGGnG7x6PABeq30FsVdAtB+E31ZYqHO9+OXTSCK106ZZtt19ExAcVlpWF7J6
+WrNaWoxotlcD08rSwRfOeZI90+B7hxYZa/+354r76flqsUI1bwC0CDXKiv+qLRXw
+Ecx7JBv77tLSLGymtU7YwHlZ9YUa3cfvmw==
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+MIIDlzCCAn+gAwIBAgIUM13n73H4knQjP85nTe7EKKvBgaUwDQYJKoZIhvcNAQEL
+BQAwWzEQMA4GA1UECwwHQXV0aCBDQTEUMBIGA1UECgwLU2lsaWNvbiBDVEYxDzAN
+BgNVBAcMBkZvbHNvbTETMBEGA1UECAwKQ2FsaWZvcm5pYTELMAkGA1UEBhMCVVMw
+HhcNMjEwNTI4MTgwNDA3WhcNMjEwNjI3MTgwNDA3WjBbMRAwDgYDVQQLDAdBdXRo
+IENBMRQwEgYDVQQKDAtTaWxpY29uIENURjEPMA0GA1UEBwwGRm9sc29tMRMwEQYD
+VQQIDApDYWxpZm9ybmlhMQswCQYDVQQGEwJVUzCCASIwDQYJKoZIhvcNAQEBBQAD
+ggEPADCCAQoCggEBANRKRCl3VqyVvKKVdEjDc8ibNndJ7mGVO0syqPmuQm1MUQyP
+G0nLGhv6i066Kgud/Q8bEnEYmjGQkKilK0e5rwc4rDRyZQh8nzqd6MeaDN8NL+dz
+BRUbUVisMis9xjVyQPZWignlNkEYADDUWhekGiQyIvxduyOD9EU8QUgyCA05Hfia
+9hmqYHZKu7hrGD8Gza5uMJr5KRDKtM15byBL6yjkoBOkFNnosvmM+/zeN9PPojL1
+HIgH6wZeb0gCQILXRyKF5a/jkvrYMTzLrAiuwU87wm7enftN1VjwT1RNlkBZFNms
+Rqqb33De7VtTTbdwV8HvwPIGNlSH9/DD4+XgKLECAwEAAaNTMFEwHQYDVR0OBBYE
+FNukN9AQLUaxYn/4FFdgOJOMWGNaMB8GA1UdIwQYMBaAFNukN9AQLUaxYn/4FFdg
+OJOMWGNaMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAFGlDrHY
+vz8SwHthQqhERobXkVFOpVpQrAWGN1y+5r/e2PjDA8LCBBAF56YgLBrr4YBu+gtj
+dUhnwR2mt03R5EPe1teMZKMK9CiBiQAJyRouTcxxK+1WXF5WbMl/ORCSCyJKJEnE
+gBiz2E02bJlgro5Xkzu0gV9AR1ddik8c1ECiytI1m9CyMsj/Y7x1/qR+m2rl3XPJ
+N80CpA8RzLJTN20ilCDWhxB4bhb50pm7Bsgj6NzIVjxQxJ0hisjX8LHAvABHuJWx
+DRxo6CAyoSQJNqueVh9M8C1B8wuV3ucV2mzzFJTj0COHBbI3jx36Q1xNA0TOHMIf
+gf8j9ZKw6TY3UpY=
+-----END CERTIFICATE-----

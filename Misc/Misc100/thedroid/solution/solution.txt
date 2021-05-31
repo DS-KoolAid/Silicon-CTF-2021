@@ -1,0 +1,25 @@
+# First let's use KafkaCat to list metadata of the Kafka server
+
+f34bdef51026:~$ kafkacat -b localhost:9092 -L
+Metadata for all topics (from broker 0: localhost:9092/0):
+ 1 brokers:
+  broker 0 at localhost:9092 (controller)
+ 1 topics:
+  topic "empire_intelligence" with 1 partitions:
+    partition 0, leader 0, replicas: 0, isrs: 0
+
+# We found an interesting topic, let's consume it into a file
+f34bdef51026:~$ kafkacat -b localhost:9092 -C -q -t empire_intelligence -e > output.txt
+
+# After looking into it, these messages look like they're base64 encoded. Run each one through a base64 decoder.
+
+f34bdef51026:~$ vi decode.sh
+#!/bin/sh
+
+while read l;
+do
+  echo "$l" | base64 -d
+  echo
+done < output.txt
+
+f34bdef51026:~$ sh decode.sh | grep Silicon
