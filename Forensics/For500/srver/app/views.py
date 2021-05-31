@@ -5,6 +5,7 @@ import hashlib
 
 
 @app.route('/')
+@app.route('/index.html')
 def home_page():
     return render_template('index.html')
 
@@ -23,13 +24,3 @@ def manage_c2_traffic():
     else:
         return render_template('404.html')
     
-    
-
-@app.route('/products.html')
-def products():
-    return render_template('products.html')
-
-
-@app.route('/secret')
-def sercret():
-    return "here is my secret"

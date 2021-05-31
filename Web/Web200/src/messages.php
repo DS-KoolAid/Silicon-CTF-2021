@@ -10,7 +10,7 @@ function form_message($failure){
                       <input type="text" style="color:black;" placeholder="Enter Username" name="uname" required>
                   
                       <input type="password" style="color:black;" placeholder="Enter Password" name="psw" required>
-                  
+                      <input type="hidden" name="id" value="2">
             
                     </div>
                     <button type="submit" style="color:black;">Login <i class="fas fa-angle-right"></i></button>
@@ -30,7 +30,7 @@ function success_message($type){
         $html_login_success = <<< "EOT"
         <h6>login success</h6>
         <h6> User ID: 1</h6>
-        <p> silicon{StromTroopersGottaEatToo} </p>
+        <h5> silicon{StromTroopersGottaEatToo} </h5>
         EOT;
 
     }

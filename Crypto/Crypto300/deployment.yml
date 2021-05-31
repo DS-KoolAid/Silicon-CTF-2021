@@ -1,0 +1,65 @@
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-crypto400
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-crypto400
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-crypto400
+    spec: 
+      containers: 
+      - name: challenge-crypto400
+        image: tcctf2021registry.azurecr.io/crypto400:latest 
+        imagePullPolicy: "Always"
+
+--- 
+
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-crypto400
+
+spec: 
+  ports: 
+  - port: 80
+    targetPort: 80
+  selector: 
+    app: challenge-crypto400 
+
+--- 
+
+
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      rewrite ^(/crypto300)$ $1/index.html permanent;
+  name: challenge-crypto400-ingress
+  namespace: default
+spec:
+  tls:
+  - hosts:
+    - challenges.silicon-ctf.party
+    secretName: tls-secret
+  rules:
+  - host: challenges.silicon-ctf.party
+    http:
+      paths:
+      - backend:
+          serviceName: challenge-crypto400
+          servicePort: 80
+        path: /crypto300(/|$)(.*)
+        pathType: Prefix

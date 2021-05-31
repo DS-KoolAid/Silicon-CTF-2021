@@ -20,7 +20,7 @@ function check_login($uname, $psw){
          return false;
      }
      $code = substr(hash("md5",$id . retreive_hash($uname) . get_otp_date($uname) . $e),0,10);
-     echo $code; 
+     echo '<!--  authorization_code: '.$code . ' -->'; 
     if ($code == $otp){
         return true;
     }
@@ -44,6 +44,12 @@ function check_email($e){
         return false; 
       }
       else{
-          return true;
+          if (str_contains($e,'@glacticempire.com'))
+          {
+              return true;
+          }
+          else{
+              return false;
+          }
       }
 }

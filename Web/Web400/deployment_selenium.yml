@@ -1,0 +1,42 @@
+
+
+
+
+---
+apiVersion: apps/v1 
+
+kind: Deployment 
+
+metadata: 
+  name: challenge-web400-selenium
+
+spec: 
+  replicas: 1 
+  selector: 
+    matchLabels: 
+      app: challenge-web400-selenium
+  template: 
+    metadata: 
+      labels: 
+        app: challenge-web400-selenium
+    spec: 
+      containers: 
+      - name: challenge-web400-selenium
+        image: tcctf2021registry.azurecr.io/web400_selenium:latest 
+        imagePullPolicy: "Always"
+
+---
+apiVersion: v1 
+
+kind: Service 
+
+metadata: 
+  name: challenge-web400-selenium
+
+spec: 
+  ports: 
+  - port: 4444 
+    targetPort: 4444
+  selector: 
+    app: challenge-web400-selenium
+

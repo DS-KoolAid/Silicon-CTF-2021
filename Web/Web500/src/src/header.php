@@ -23,7 +23,7 @@ Licence URI: https://www.os-templates.com/template-terms
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div id="logo" class="one_quarter first">
-      <h1><a href="../index.html"><span>G</span>alactic<span>E</span>mpire</h1>
+      <h1><a href="index.html"><span>G</span>alactic<span>E</span>mpire</h1>
     </div>
     <div class="three_quarter">
       <ul class="nospace clear">
@@ -31,7 +31,7 @@ Licence URI: https://www.os-templates.com/template-terms
           <div class="block clear"><a href="#"><i class="fas fa-phone"></i></a> <span><strong>Give us a call:</strong> +00 (123) 456 7890</span></div>
         </li>
         <li class="one_third">
-          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> support@empire.site</span></div>
+          <div class="block clear"><a href="#"><i class="fas fa-envelope"></i></a> <span><strong>Send us a mail:</strong> support@galacticempire.com</span></div>
         </li>
         <li class="one_third">
           <div class="block clear"><a href="#"><i class="fas fa-clock"></i></a> <span><strong> Mon. - Fri.:</strong> 08.00am - 18.00pm</span></div>

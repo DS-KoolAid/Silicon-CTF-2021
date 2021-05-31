@@ -4,7 +4,6 @@ function form_message($failure){
         $fail_message="<h6>Password Incorrect</h6>";
 
         $html_form = <<<'EOT'
-        
                   <form action="index.php" method="POST">
                     <div class="container">
                   

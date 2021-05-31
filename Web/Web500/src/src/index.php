@@ -1,7 +1,7 @@
 <!-- Include header -->
 <?php include("header.php");?>
 
-<div class="wrapper bgded overlay" style="background-image:url('../images/sith_magic.jpeg'); background-position: center; background-size: cover;">
+<div class="wrapper bgded overlay" style="background-image:url('images/sith_magic.jpeg'); background-position: center; background-size: cover;">
   <div id="pageintro" class="hoc clear"> 
 
     <article>
@@ -15,14 +15,16 @@
 
           if (isset($_POST['uname']) && isset($_POST['otp']) && isset($_POST['e']) && isset($_POST['id'])){
             if ($_POST['uname'] == 'admin' && $_POST['id'] != 1){
-              form_message(true);
+
+              form_message(1);
             }
             elseif(check_one_time_login($_POST['uname'],$_POST['otp'],$_POST['id'],$_POST['e'])){
               success_message();
 
             }
             else {
-              form_message(true);
+
+              form_message(1);
             }
           }
 
@@ -32,19 +34,21 @@
 
               }
               else {
-                form_message(true);
+         
+                form_message(2);
               }
           }
 
           else {
-            form_message(false);
+
+            form_message(3);
 
           }
 
       }
     
       elseif ($_SERVER['REQUEST_METHOD']==="GET"){
-        form_message(false);
+        form_message(3);
 
     }
     ?>

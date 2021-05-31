@@ -1,7 +1,7 @@
 version: '3'
 services:
     login_bot:
-        image : tcctf2021registry.azurecr.io/login_bot:latest
+        image : tcctf2021registry.azurecr.io/web400_phish:latest
         build: ./login_bot
         container_name: login_bot
         ports:
@@ -9,6 +9,7 @@ services:
         networks:
             - backend 
     vault_server:
+        image: tcctf2021registry.azurecr.io/web400_vault:latest
         build: ./vault_server
         container_name: vault_server
         ports:
@@ -16,6 +17,7 @@ services:
         networks:
             - backend
     selenium_server:
+        image: tcctf2021registry.azurecr.io/web400_selenium:latest
         build: ./selenium_server
         container_name: selenium_server
         networks:

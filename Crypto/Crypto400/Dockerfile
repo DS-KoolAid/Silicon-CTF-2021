@@ -1,12 +1,5 @@
-FROM alpine:latest
+FROM php:7-apache
 
-ADD entrypoint.sh /root/entrypoint.sh
-ADD motd /etc/motd
-RUN apk add --update bash
-RUN addgroup -S sili && adduser sili -G sili -D && chown root: /root/entrypoint.sh && chmod 777 /root/entrypoint.sh
+ADD crypto400_files.zip /var/www/html/
 
-ENTRYPOINT "/root/entrypoint.sh"
-CMD ["/bin/bash"]
-
-
-
+RUN chmod +r /var/www/html/crypto400_files.zip

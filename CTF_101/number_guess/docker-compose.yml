@@ -1,6 +1,7 @@
 version: '3'
 services:
     http_id_guess:
+        image: tcctf2021registry.azurecr.io/ctf_guess:latest
         build: .
         ports:
             - "8765:8080"

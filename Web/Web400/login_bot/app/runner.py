@@ -19,24 +19,22 @@ def send_link_get():
 
 @app.route('/send_link.html',methods=['POST'])
 def run_browsing():
-    # name_var  = request.args.get('name',None)
     var_name = request.form['variable_name']
     var_value = request.form['variable_value']
     run_headless(var_name,var_value)
-    gen_url = f"https://challenge.silicon-ctf.party/web300/index.php?{var_name}={var_value}"
+    gen_url = f"https://challenges.silicon-ctf.party/web400/index.php?{var_name}={var_value}"
     return render_template('gen_test_link.html', gen_url=gen_url, test=False)
 
 @app.route('/test_link.html',methods=['GET'])
 def test_link_get():
     return render_template('link_form.html', test=True)
-# @app.route('/test_browsing')
-# def test_browsing():
+
 
 @app.route('/test_link.html',methods=['POST'])
 def test_link_post():
     var_name = request.form['variable_name']
     var_value = request.form['variable_value']
-    gen_url = f"https://challenge.silicon-ctf.party/web300/index.php?{var_name}={var_value}"
+    gen_url = f"https://challenges.silicon-ctf.party/web400/index.php?{var_name}={var_value}"
     return render_template('gen_test_link.html', gen_url=gen_url, test=True)
 
 

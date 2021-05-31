@@ -1,6 +1,7 @@
 version: '3'
 services:
     basic_auth:
+        image: tcctf2021registry.azurecr.io/for100_auth:latest
         build: .
         ports:
             - "8235:8080"
