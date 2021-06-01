@@ -1,4 +1,0 @@
-export FLAG=flag{3nv1R0nm3nt_v4R5_aR3_k00L}
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi

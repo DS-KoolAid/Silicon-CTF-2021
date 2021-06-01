@@ -1,6 +1,0 @@
-version: '3'
-services:
-    env:
-        build: .
-        ports:
-         - "2222:22"

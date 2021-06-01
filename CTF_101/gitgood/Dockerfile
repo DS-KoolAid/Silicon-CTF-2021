@@ -1,4 +1,3 @@
-# Kafka and Zookeeper
 FROM alpine:latest
 
 RUN apk add build-base bash git
