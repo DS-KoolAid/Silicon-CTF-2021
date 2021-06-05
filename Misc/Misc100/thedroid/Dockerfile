@@ -36,7 +36,7 @@ wget https://github.com/sgerrand/alpine-pkg-kafkacat/releases/download/1.6.0-r0/
 apk add --no-cache kafkacat-1.6.0-r0.apk && \
 addgroup -S sili && adduser sili -G sili -D && \
 supervisord && \
-$KAFKA_HOME/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic empire_intelligence && \
+$KAFKA_HOME/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --topic empire_intelligence -config retention.ms=2592000000 && \
 /etc/produce_flag.sh && \
 chown root: /root/entrypoint.sh && \
 supervisorctl stop all && \
