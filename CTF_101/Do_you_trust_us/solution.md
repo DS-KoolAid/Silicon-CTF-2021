@@ -1,4 +1,4 @@
-Message
+Message:
 Do you trust things the Empire is hosting for download?  
 No
 
