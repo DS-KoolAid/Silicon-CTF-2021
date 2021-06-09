@@ -34,8 +34,8 @@ func create_sig(dt string) string {
 func send_GET(auth_ts string, auth_sig string) []byte {
 
 	client := &http.Client{}
-	// req, _ := http.NewRequest("GET", "http://localhost:8235/c2", nil)
-	req, _ := http.NewRequest("GET", "https://challenges.silicon-ctf.party/for500/c2", nil)
+	req, _ := http.NewRequest("GET", "http://localhost:8235/c2", nil)
+	// req, _ := http.NewRequest("GET", "https://challenges.silicon-ctf.party/for500/c2", nil)
 	req.Header.Set("auth_timestamp", auth_ts)
 	req.Header.Set("auth_signature", auth_sig)
 	res, _ := client.Do(req)
