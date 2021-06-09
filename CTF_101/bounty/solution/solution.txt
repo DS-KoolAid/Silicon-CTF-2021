@@ -1,7 +1,19 @@
 # This challenge's inspiration came from BSidesSF CTF 2021
 
 # This Bind server has port 53 listening on UDP as well as TCP
-# which is what's used for zone transfers. Using dig to initiate
-# an A record transfer will reveal the flag.
+# which is what's used for zone transfers. 
+
+netstat -an
+
+# TCP really shouldn't be listening to the public, so if you 
+# see it open then it can be possible to pull all records at once.
+
+# The other part of the challenge that requires a bit of exploration is
+# knowing which domain to query against. With some trial and error,
+# if we throw the silicon-ctf.party domain at it, which is the domain of our CTF,
+# the DNS server will respond with results.
+
+# Dig is a popular DNS query tool, so if we use that along with the
+# zone transfer argument (AXFR), we can pull all records with one command.
 
 dig silicon-ctf.party AXFR @localhost

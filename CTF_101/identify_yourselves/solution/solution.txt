@@ -1,12 +1,115 @@
 # This challenge's inspiration came from BSidesSF CTF 2021
 
-openssl genrsa -out ca.key 2048
-openssl req -new -key ca.key -sha256 -days 30 -x509 -out ca.crt -subj '/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US'
-openssl genrsa -out client.key 2048
-mkdir db
-echo '1005'>db/serial
-openssl req -new -key client.key -out client.csr -subj '/CN=client/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US'
-touch ./db/ca.db
-openssl ca -config ca.cnf -in client.csr -out client.crt
-cat client.key client.crt ca.crt > client_chain.pem
-curl -v -k --cert ./client_chain.pem https://localhost
+# Some initial clues are laid out in the home directory
+# leading us to believe that maybe OpenSSL can be used here to create
+# a dummy certificate authority
+
+f859101d90a6:~$ ls -la
+total 24
+drwxr-sr-x    1 sili     sili          4096 Jun  8 07:13 .
+drwxr-xr-x    1 root     root          4096 May 30 06:22 ..
+-rw-------    1 sili     sili           145 Jun  8 07:15 .ash_history
+-rw-r--r--    1 sili     sili          2522 May 30 06:46 ca.cnf
+drwxr-sr-x    2 sili     sili          4096 May 31 06:35 db
+
+# The challenge is asking us to craft a certificate and use it as a client
+# to the running HTTPS server
+
+# If we simply use curl with the server, we can see that it's
+# requiring client auth by the HTTP response
+
+f859101d90a6:~$ curl https://localhost:443 -k
+No Client Certificate
+
+# Now let's make a TLS handshake with the server to see the certificate it's hosting
+
+f859101d90a6:~$ openssl s_client -connect localhost:443
+
+# The issuer is "issuer=OU = Auth CA, O = Silicon CTF, L = Folsom, ST = California, C = US"
+# Maybe we should use the same DN with our new CA?
+
+# Let's attempt to create a certificate authority now
+f859101d90a6:~$ openssl genrsa -out ca.key 2048
+f859101d90a6:~$ openssl req -new -key ca.key -sha256 -days 30 -x509 -out ca.crt -subj '/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US'
+f859101d90a6:~$ openssl genrsa -out client.key 2048
+
+# Okay now we have our own CA signing key
+# Let's create a client certifcate and try to sign it
+
+f859101d90a6:~$ openssl req -new -key client.key -out client.csr -subj '/CN=client/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US'
+f859101d90a6:~$ openssl ca -config ca.cnf -in client.csr -out client.crt
+
+Using configuration from ca.cnf
+139816627256136:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:69:fopen('./db/ca.db','r')
+139816627256136:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:76:
+
+# Hmm, it's complaining about a missing ca.db file in the db directory. Let's create one.
+
+f859101d90a6:~$ touch ./db/ca.db
+
+# And try again
+
+f859101d90a6:~$ openssl ca -config ca.cnf -in client.csr -out client.crt
+
+Using configuration from ca.cnf
+./db/serial: No such file or directory
+error while loading serial number
+140124690525000:error:02001002:system library:fopen:No such file or directory:crypto/bio/bss_file.c:69:fopen('./db/serial','r')
+140124690525000:error:2006D080:BIO routines:BIO_new_file:no such file:crypto/bio/bss_file.c:76:
+
+# Now it wants a serial file in db. Let's add that
+
+f859101d90a6:~$ touch db/serial
+
+# And try again... again
+
+f859101d90a6:~$ openssl ca -config ca.cnf -in client.csr -out client.crt
+
+Using configuration from ca.cnf
+unable to load number from ./db/serial
+error while loading serial number
+140069507058504:error:0D066096:asn1 encoding routines:a2i_ASN1_INTEGER:short line:crypto/asn1/f_int.c:140:
+
+# It wants a number there. Alright
+
+f859101d90a6:~$ echo '1000'>db/serial
+f859101d90a6:~$ openssl ca -config ca.cnf -in client.csr -out client.crt
+
+Using configuration from ca.cnf
+Check that the request matches the signature
+Signature ok
+Certificate Details:
+        Serial Number: 4096 (0x1000)
+        Validity
+            Not Before: Jun  8 07:27:10 2021 GMT
+            Not After : Jun 18 07:27:10 2022 GMT
+        Subject:
+            organizationName          = Silicon CTF
+            organizationalUnitName    = Auth CA
+            commonName                = client
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                22:2F:0B:7D:35:09:BE:5F:9F:5D:E3:64:0C:F3:31:7F:A6:E9:17:58
+            X509v3 Authority Key Identifier: 
+                keyid:5C:95:85:80:E4:57:21:DF:28:36:10:09:FC:3C:7A:F8:94:B8:51:64
+                DirName:/OU=Auth CA/O=Silicon CTF/L=Folsom/ST=California/C=US
+                serial:30:05:8E:47:49:6E:96:2B:D9:D5:BA:A1:36:C3:9F:95:3F:9C:9A:AC
+
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+Certificate is to be certified until Jun 18 07:27:10 2022 GMT (375 days)
+Sign the certificate? [y/n]: y
+
+1 out of 1 certificate requests certified, commit? [y/n]y
+Write out database with 1 new entries
+Data Base Updated
+
+# We were able to sign the cert!
+# Okay now let's put the client key, cert, and ca.crt into one file so we can submit it with curl
+
+f859101d90a6:~$ cat client.key client.crt ca.crt > client_chain.pem
+f859101d90a6:~$ curl -v -k --cert ./client_chain.pem https://localhost
+
+Welcome, CN=client,OU=Auth CA,O=Silicon CTF.  Your flag: silicon{D0_0r_DO_NoT_thER3_I5_No_TRY}
