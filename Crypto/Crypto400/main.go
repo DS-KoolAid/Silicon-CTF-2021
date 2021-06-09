@@ -87,6 +87,16 @@ func EncryptWithPublicKey(msg []byte, pub *rsa.PublicKey) []byte {
 	return ciphertext
 }
 
+// DecryptWithPrivateKey decrypts data with private key
+func DecryptWithPrivateKey(ciphertext []byte, priv *rsa.PrivateKey) []byte {
+	hash := sha512.New()
+	plaintext, err := rsa.DecryptOAEP(hash, rand.Reader, priv, ciphertext, nil)
+	if err != nil {
+		log.Error(err)
+	}
+	return plaintext
+}
+
 func make_key() []byte {
 	key := make([]byte, 32)
 	_, err := rand.Read(key)
@@ -105,7 +115,7 @@ func main() {
 	EncryptWithPublicKey(temp_key, pub)
 	out := make([]byte, len(data))
 	salsa20.XORKeyStream(out, data, nonce[:], &key)
-	f, err2 := os.OpenFile("encrypted_Darkside_flag.jpeg", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f, err2 := os.OpenFile("encrypted_Darkside_flag2.jpeg", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	check(err2)
 	f.Write([]byte("key:"))
 	f.Write(key[:])
@@ -116,12 +126,12 @@ func main() {
 	check(err4)
 	out2 := make([]byte, len(data2))
 	salsa20.XORKeyStream(out2, data2, nonce[:], &key)
-	f2, err3 := os.OpenFile("encrpted_the_next_jedi.jpeg", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	f2, err3 := os.OpenFile("encrypted_the_next_jedi2.jpeg", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
 	check(err3)
 	f2.Write([]byte("key:"))
 	f2.Write(key[:])
 	f2.Write([]byte("data:"))
-	f2.Write(out)
+	f2.Write(out2)
 	f2.Close()
 	err = ioutil.WriteFile("private_key.pem", PrivateKeyToBytes(priv), 0644)
 

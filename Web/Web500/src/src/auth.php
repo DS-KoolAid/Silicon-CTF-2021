@@ -44,7 +44,7 @@ function check_email($e){
         return false; 
       }
       else{
-          if (str_contains($e,'@glacticempire.com'))
+          if (str_contains($e,'@galacticempire.com'))
           {
               return true;
           }
