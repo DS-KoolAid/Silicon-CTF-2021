@@ -1,7 +1,7 @@
 <!-- Include header -->
 <?php include("header.php");?>
 
-<div class="wrapper bgded overlay" style="background-image:url('images/sith_magic.jpeg'); background-position: center; background-size: cover;">
+<div class="wrapper bgded overlay" style="background-image:url('images/sith_magic.png'); background-position: center; background-size: cover;">
   <div id="pageintro" class="hoc clear"> 
 
     <article>

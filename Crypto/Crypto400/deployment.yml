@@ -46,7 +46,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      rewrite ^(/crypto400)$ $1/index.html permanent;
+      rewrite ^(/crypto300)$ $1/index.html permanent;
   name: challenge-crypto400-file-ingress
   namespace: default
 spec:
@@ -61,5 +61,5 @@ spec:
       - backend:
           serviceName: challenge-crypto400-file
           servicePort: 80
-        path: /crypto400(/|$)(.*)
+        path: /crypto300(/|$)(.*)
         pathType: Prefix
