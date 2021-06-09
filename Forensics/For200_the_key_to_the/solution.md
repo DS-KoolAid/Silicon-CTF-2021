@@ -24,3 +24,5 @@ Lastly, need to use one of these methods for specifying the key used for git: ht
 `GIT_SSH_COMMAND="ssh -i id_rsa" git clone git@github.com:tc-trooper17254/private_files.git`
 
 Success! Opening favorite_memes/rebel-flag.jpg gives the flag `silicon{PR0t3ct_y0Ur_G1tHUb_k3y5}`
+
+**Note:** A last minute change to challenge ended up making it easier than above. It turns out if you set an SSH key as a deploy key on a repo in order to make that key READ only, it will then have that repo show up when you test the key on GitHub. Oops :)
