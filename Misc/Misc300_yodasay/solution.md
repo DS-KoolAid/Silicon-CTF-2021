@@ -25,4 +25,4 @@ We need to fix PATH in order to run other commands like the correct cat :) `expo
 Then reading artifact.txt gives us the flag - `cat artifact.txt`
 silicon{M1nd_tH053_rE14t1v3_p4th5_i_say}
 
-Some solvers noticed in the yodasay.c source that art.txt also did not use a full path, so an alternative solution is to use a symbolic link to have artifact.txt point to an art.txt file. That wasn't intentional but cool to see folks figure out!
+In a previous version of this challenge, there was an alternative solution where some solvers noticed in the yodasay.c source that art.txt also did not use a full path, so you can use a symbolic link to have artifact.txt point to an art.txt file. That wasn't intentional but cool to see folks figure out! It has been removed in the latest version.

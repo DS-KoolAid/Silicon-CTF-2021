@@ -9,7 +9,7 @@ int main(int argc, char **argv)
     }
     else {
         printf("%s, I say\n", argv[1]);
-        system("cat art.txt");
+        system("cat /home/officer/art.txt");
     }    
 
     return (0);

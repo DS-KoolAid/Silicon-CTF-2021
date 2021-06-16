@@ -1,6 +1,6 @@
 Private key and ssh config reveal it's used for github
 
-`ssh git@github.com -i id_rsa` returns the message `Hi tc-trooper17254! You've successfully authenticated, but GitHub does not provide shell access.`
+`ssh git@github.com -i id_rsa` returns the message `Hi tc-trooper17254! You've successfully authenticated, but GitHub does not provide shell access.` *Note:* you may need to modify the permissions of the private key for SSH to accept it - `chmod 600 id_rsa`
 
 Checking github, there is a user with this name - https://github.com/tc-trooper17254
 One public repo - https://github.com/tc-trooper17254/personal-website
@@ -25,4 +25,4 @@ Lastly, need to use one of these methods for specifying the key used for git: ht
 
 Success! Opening favorite_memes/rebel-flag.jpg gives the flag `silicon{PR0t3ct_y0Ur_G1tHUb_k3y5}`
 
-**Note:** A last minute change to challenge ended up making it easier than above. It turns out if you set an SSH key as a deploy key on a repo in order to make that key READ only, it will then have that repo show up when you test the key on GitHub. Oops :)
+In a previous version of this challenge, a last minute change to challenge ended up making it easier than above. It turns out if you set an SSH key as a deploy key on a repo in order to make that key READ only, it will then have that repo show up when you test the key on GitHub. Oops :) This has been fixed in the latest version 
