@@ -19,7 +19,7 @@ RUN chown officer: artifact.txt
 RUN chown officer: art.txt 
 RUN chown officer: yodasay
 RUN chmod 400 artifact.txt
-RUN chmod 755 art.txt
+RUN chmod 644 art.txt
 RUN chmod 4755 yodasay
 
 # Run as an unprivileged user

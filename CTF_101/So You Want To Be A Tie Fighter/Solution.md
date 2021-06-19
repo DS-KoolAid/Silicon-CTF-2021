@@ -7,5 +7,5 @@ Tiefightersupreme
 
 
 Solution:
-1. Go to slide share and searcxh for either "So You Want To Be A Tie Fighter" or "SiliCon5" or "Tiefightersupreme" 
-2. Go thorugh slides and find flag 
+1. Go to slide share and search for either "So You Want To Be A Tie Fighter" or "SiliCon5" or "Tiefightersupreme" 
+2. Go through slides and find flag on slide #5
